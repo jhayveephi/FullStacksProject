@@ -4,7 +4,7 @@ import React from 'react';
 const Team = () => (
   <div className="team">
     <div className="team-member">
-      <img src="/images/person1.jpg" alt="Person 1" />
+      <img src="/images/person1.jpg" alt="Person 1" className="team-img" />
       <h3>John Doe</h3>
       <p>
         John is a passionate developer with expertise in frontend technologies. He loves building
@@ -13,7 +13,7 @@ const Team = () => (
     </div>
 
     <div className="team-member">
-      <img src="/images/person2.jpg" alt="Person 2" />
+      <img src="/images/person2.jpg" alt="Person 2" className="team-img"/>
       <h3>Jane Smith</h3>
       <p>
         Jane is a skilled designer who brings creativity to our team. Her eye for design and attention
@@ -22,7 +22,7 @@ const Team = () => (
     </div>
 
     <div className="team-member">
-      <img src="/images/person3.jpg" alt="Person 3" />
+      <img src="/images/person3.jpg" alt="Person 3" className="team-img" />
       <h3>Bob Johnson</h3>
       <p>
         Bob is a backend developer who ensures the functionality and performance of our applications.

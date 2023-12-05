@@ -9,6 +9,8 @@ body {
   flex-direction: column;
   background-color: #f8f8f8;
   min-height: 100vh;
+  width: 70%;
+  margin: 0 auto;
 }
 
 nav {
@@ -45,6 +47,28 @@ nav a.active {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   margin: 20px;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-member {
+  width: 30%; /* Adjust the width based on your preference */
+  margin: 10px; /* Add margin between team members */
+  padding: 15px;
+  border: 1px solid #ddd; /* Optional: Add a border around each team member */
+}
+
+.team-img {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
 }
 
 header {
@@ -112,6 +136,7 @@ footer {
 footer p {
   margin: 0;
   font-size: 14px;
+  color: #fff;
 }
 
 /* Add styles for Links in the header */
@@ -230,3 +255,70 @@ header a:hover {
 }
 
 /* Dark Mode */
+/* src/Home.css */
+.home {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #555;
+
+}
+
+h2{
+  color:#f50057;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  text-align: left;
+  margin-bottom: 10px; 
+}
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #333;
+}
+
+.socials i {
+  transition: color 0.3s;
+}
+
+.socials i:hover {
+  color: #007bff; /* Change the color to your preferred hover color */
+}
+
+h3{
+  color: #f50057;
+}
+
+.form-control {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 15%;
+  margin: auto;
+  box-sizing: border-box; /* Ensures that padding is included in the width */
+  font-size: 0.9em; /* Adjust the font size */
+  align-self: auto;
+}
+.btn-primary {
+  background-color: #ff0066;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+

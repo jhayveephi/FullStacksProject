@@ -40,6 +40,7 @@ const Exchange = () => {
         toCurrency: selectedToCurrency.label,
         amount: amount
       })
+
         .then(response => setResult(`${amount} ${selectedFromCurrency.label} is ${response.data.result} ${selectedToCurrency.label}`))
         .catch(error => console.error(error));
     }

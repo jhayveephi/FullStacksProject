@@ -111,6 +111,28 @@ app.delete('/api/currencies/deleteByName/:name', async (req, res) => {
   }
 });
 
+// Define a route for currency conversion
+app.post('/api/convert', async (req, res) => {
+  try {
+    const { fromCurrency, toCurrency, amount } = req.body;
+
+    // Fetch currencies from the database
+    const currencies = await fetchExchangeRates();
+
+    // Find the conversion rates
+    const fromRate = currencies.find(currency => currency.name === fromCurrency)?.rate || 1;
+    const toRate = currencies.find(currency => currency.name === toCurrency)?.rate || 1;
+
+    // Perform currency conversion
+    const convertedAmount = (parseFloat(amount) * toRate) / fromRate;
+
+    res.json({ result: convertedAmount.toFixed(2) });
+  } catch (error) {
+    console.error('Error converting currency:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 app.listen(PORT, async () => {
   console.log(`Server is running on port ${PORT}`);
   await fetchExchangeRates();
