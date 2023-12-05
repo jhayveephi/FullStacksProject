@@ -6,6 +6,11 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// middleware
+const corsOptions = {
+  origin: "https://exchangecurrency.onrender.com", // frontend URI (ReactJS)
+}
+
 app.use(cors());
 app.use(express.json());
 
