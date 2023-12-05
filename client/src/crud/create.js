@@ -16,7 +16,7 @@ const Create =()=> {
       console.log('Currency Data:', currencyData);
 
       // Check if the currency with the same name already exists
-      const existingCurrency = await axios.get(`https://backend-server-xgdi.onrender.com/api/currencies/name/${name}`);
+      const existingCurrency = await axios.get(`https://server-le71.onrender.com/api/currencies/name/${name}`);
       if (existingCurrency.data && existingCurrency.data.length > 0) {
         // Currency already exists, show error message and clear the form
         setErrorMessage('Currency with this name already exists. Please choose a different name.');
@@ -26,7 +26,7 @@ const Create =()=> {
       }
 
       // Currency does not exist, proceed with creating it
-      const response = await axios.post('https://backend-server-xgdi.onrender.com/api/currencies', currencyData);
+      const response = await axios.post('https://server-le71.onrender.com/api/currencies', currencyData);
       console.log('Response:', response.data);
 
       console.log('Currency created successfully!');

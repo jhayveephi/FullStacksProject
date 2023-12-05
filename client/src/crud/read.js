@@ -20,7 +20,7 @@ const Read = () => {
 
   const fetchCurrencies = async () => {
     try {
-      const response = await axios.get('https://backend-server-xgdi.onrender.com/api/currencies');
+      const response = await axios.get('https://server-le71.onrender.com/api/currencies');
       console.log('Fetched currencies:', response.data);
       const sortedCurrencies = response.data.sort((a, b) => a.name.localeCompare(b.name));
       setCurrencies(sortedCurrencies);
@@ -35,7 +35,7 @@ const Read = () => {
 
   const deleteCurrency = async (name) => {
     try {
-      await axios.delete(`https://backend-server-xgdi.onrender.com/api/currencies/deleteByName/${name}`);
+      await axios.delete(`https://server-le71.onrender.com/api/currencies/deleteByName/${name}`);
       console.log('Currency deleted from DB:', name);
 
       setCurrencies((prevCurrencies) =>

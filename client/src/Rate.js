@@ -8,7 +8,7 @@ const Rate = () => {
 
   useEffect(() => {
     // Fetch data when the component mounts
-    axios.get('https://backend-server-xgdi.onrender.com/api/currencies')
+    axios.get('https://server-le71.onrender.com/api/currencies')
       .then(response => {
         setData(response.data);
       })
