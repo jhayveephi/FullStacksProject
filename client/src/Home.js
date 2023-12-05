@@ -1,18 +1,17 @@
-// src/Home.js
 import React from 'react';
-
+import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome styles
 
 const Home = () => (
   <div className="home">
     <h1>Currency Exchange App</h1>
-    
+
     <p style={{ textAlign: 'left' }}>
       Greetings and a warm welcome to FullStacks Currency Exchange, your go-to platform for hassle-free currency conversion! Our dedicated team of enthusiastic beginners has pooled their skills and passion to craft an exceptional user-friendly experience just for you.
     </p>
 
     <h2>About Us</h2>
     <p>
-       We understand the importance of simplicity and efficiency when it comes to currency exchange. Whether you're a seasoned traveler, a global entrepreneur, or simply someone looking to stay updated with the latest exchange rates, our platform has been designed with you in mind.
+      We understand the importance of simplicity and efficiency when it comes to currency exchange. Whether you're a seasoned traveler, a global entrepreneur, or simply someone looking to stay updated with the latest exchange rates, our platform has been designed with you in mind.
     </p>
 
     <h2>Our Mission</h2>
@@ -28,12 +27,13 @@ const Home = () => (
     </ul>
 
     <h4>Follow us on our social media platforms</h4>
-    
+
     <div className="socials mt-20">
-      <a href="#"><i className="fab fa-facebook fa-4x"></i></a>
-      <a href="#" style={{ marginLeft: '50px' }}><i className="fab fa-twitter fa-4x"></i></a>
-      <a href="#" style={{ marginLeft: '50px' }}><i className="fab fa-google-plus fa-4x"></i></a>
-      <a href="#" style={{ marginLeft: '50px' }}><i className="fa fa-envelope fa-4x"></i></a>
+      <a href="https://www.facebook.com"><i className="fab fa-facebook fa-4x"></i></a>
+      <a href="https://www.twitter.com" style={{ marginLeft: '50px' }}><i className="fab fa-twitter fa-4x"></i></a>
+      <a href="https://www.google.com" style={{ marginLeft: '50px' }}><i className="fab fa-google-plus fa-4x"></i></a>
+      <a href="mailto:example@example.com" style={{ marginLeft: '50px' }}><i className="fas fa-envelope fa-4x"></i></a>
+      {/* Note: Changed "fa" to "fas" for the envelope icon (solid style) */}
     </div>
   </div>
 );
