@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 
 // middleware
 const corsOptions = {
-  origin: "https://exchangecurrency.onrender.com", // frontend URI (ReactJS)
+  origin: "https://currencyexchange-09qj.onrender.com", // frontend URI (ReactJS)
 }
 
 app.use(cors());
