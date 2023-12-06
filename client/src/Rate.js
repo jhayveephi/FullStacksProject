@@ -3,12 +3,14 @@ import React, { useState, useEffect } from 'react';
 import { Outlet, NavLink } from 'react-router-dom';
 import axios from 'axios';
 
+// Rate component responsible for managing the "Exchange Rate" section
 const Rate = () => {
+  // State to store data fetched from the server
   const [data, setData] = useState([]);
 
   useEffect(() => {
     // Fetch data when the component mounts
-    axios.get('https://server-le71.onrender.com/api/currencies')
+    axios.get('http://localhost:5000/api/currencies')
       .then(response => {
         setData(response.data);
       })
@@ -19,8 +21,10 @@ const Rate = () => {
 
   return (
     <div className="main-content crud">
+      {/* Header for the "Exchange Rate" section */}
       <div className="crud-header group">
         <h2>Exchange Rate</h2>
+        {/* Navigation links for Read and Create sub-routes */}
         <ul className="crud-nav">
           {/* NavLink for Read */}
           <li>

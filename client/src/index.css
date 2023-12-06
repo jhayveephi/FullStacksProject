@@ -1,4 +1,4 @@
-/* src/App.css */
+
 
 body {
   margin: 0;
@@ -32,11 +32,7 @@ nav a {
   transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-  background-color: #c51162;
-}
-
-nav a.active {
+nav a:hover, nav a.active {
   background-color: #c51162;
 }
 
@@ -55,10 +51,10 @@ nav a.active {
 }
 
 .team-member {
-  width: 30%; /* Adjust the width based on your preference */
-  margin: 10px; /* Add margin between team members */
+  width: 30%;
+  margin: 10px;
   padding: 15px;
-  border: 1px solid #ddd; /* Optional: Add a border around each team member */
+  border: 1px solid #ddd;
 }
 
 .team-img {
@@ -98,7 +94,7 @@ header h1 {
 
 .amount {
   margin-top: 10px;
-  margin-bottom: 20px; /* Adjusted margin for spacing */
+  margin-bottom: 20px;
   font-size: 16px;
 }
 
@@ -210,19 +206,7 @@ header a:hover {
   color: #fff;
 }
 
-.modal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-}
-
-.popup {
+.modal, .popup {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,7 +227,7 @@ header a:hover {
 
 .popup button {
   padding: 10px;
-  background-color: #007bff;
+  background-color: #f50057;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -251,7 +235,7 @@ header a:hover {
 }
 
 .popup button:hover {
-  background-color: #0056b3;
+  background-color: #c51162;
 }
 
 /* Dark Mode */
@@ -267,12 +251,12 @@ p {
   font-size: 1.2em;
   line-height: 1.5;
   color: #555;
-
 }
 
-h2{
-  color:#f50057;
+h2 {
+  color: #f50057;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -280,8 +264,9 @@ ul {
 
 li {
   text-align: left;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
+
 .socials {
   margin-top: 20px;
 }
@@ -296,10 +281,10 @@ li {
 }
 
 .socials i:hover {
-  color: #007bff; /* Change the color to your preferred hover color */
+  color: #007bff;
 }
 
-h3{
+h3 {
   color: #f50057;
 }
 
@@ -309,16 +294,183 @@ h3{
   border-radius: 4px;
   width: 15%;
   margin: auto;
-  box-sizing: border-box; /* Ensures that padding is included in the width */
-  font-size: 0.9em; /* Adjust the font size */
+  box-sizing: border-box;
+  font-size: 0.9em;
   align-self: auto;
 }
+
 .btn-primary {
-  background-color: #ff0066;
-  color: #fff;
   padding: 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
+.btn-primary, .edit-button {
+  background-color: #039124;
+  color: #fff;
+}
+
+.edit-button {
+  margin-right: 5px;
+}
+
+.delete-button {
+  padding: 10px;
+  background-color: #e71000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Common Styles for Create and Update */
+.form-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-control {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.btn-primary {
+  padding: 15px 30px;
+  cursor: pointer;
+  background-color: #f50057;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-primary:hover {
+  background-color: #c51162;
+}
+
+/* Additional Styles for Create.js */
+.success-message {
+  color: #4caf50;
+}
+
+/* Additional Styles for Update.js */
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.popup button {
+  padding: 10px;
+  background-color: #f50057;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #c51162;
+}
+
+
+* Styles for Search Form */
+.search-form {
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  width: 60%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #2196f3; /* Blue color for the search button */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #1565c0; /* Darker blue color on hover */
+}
+
+/* Add this to your existing CSS file or update it accordingly */
+
+.currency-select-container {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+.exchange-button {
+  padding: 15px 30px;
+  cursor: pointer;
+  background-color: #2196f3; /* Blue color for the exchange button */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.exchange-button:hover {
+  background-color: #1565c0; /* Darker blue color on hover */
+}
+/* Add these styles for the new amount label and input */
+.amount {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.amount-label {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.amount-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}

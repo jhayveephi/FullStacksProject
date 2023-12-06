@@ -1,38 +1,44 @@
 import React from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome styles
 
+// Home component representing the landing page of the Currency Exchange App
 const Home = () => (
   <div className="home">
-    <h1>Currency Exchange App</h1>
+    <h1>Welcome to the Currency Exchange App</h1>
 
     <p style={{ textAlign: 'left' }}>
-      Greetings and a warm welcome to FullStacks Currency Exchange, your go-to platform for hassle-free currency conversion! Our dedicated team of enthusiastic beginners has pooled their skills and passion to craft an exceptional user-friendly experience just for you.
+      {/* Introduction and welcome message */}
+      Hello and a warm welcome to our Currency Exchange App! We're a team of enthusiastic beginners on an exciting journey to simplify currency conversion for you. Our project is a labor of love, fueled by our passion for learning and creating something valuable for users like you.
     </p>
 
     <h2>About Us</h2>
     <p>
-      We understand the importance of simplicity and efficiency when it comes to currency exchange. Whether you're a seasoned traveler, a global entrepreneur, or simply someone looking to stay updated with the latest exchange rates, our platform has been designed with you in mind.
+      {/* Brief description about the team */}
+      Meet the faces behind the code! We're a diverse group of individuals with a shared goal - to make currency exchange easy and accessible. Whether you're a frequent traveler, a budding entrepreneur, or someone curious about exchange rates, our platform is designed with simplicity and user-friendliness in mind.
     </p>
 
     <h2>Our Mission</h2>
     <p>
-      Our mission is clear - to provide a seamless and intuitive platform for users of all levels. We strive to make currency conversion an effortless process, ensuring that you can focus on what matters most to you. Whether you're managing personal finances or working on a global project, FullStacks Currency Exchange is here to simplify your currency transactions.
+      {/* Overview of the project's mission */}
+      Our mission is simple yet ambitious - to provide a seamless and intuitive platform for users of all levels. As beginners, we're eager to learn and improve our skills while making currency conversion effortless for you. Whether you're managing your personal finances or working on a small project, the Currency Exchange App is here to simplify your currency transactions.
     </p>
 
     <h2>Key Features</h2>
     <ul>
-      <li><strong>Real-Time Exchange Rates:</strong> Stay updated with the latest currency values. Our platform fetches real-time data to ensure accuracy in every conversion.</li>
-      <li><strong>User-Friendly Interface:</strong> Our intuitive interface is designed for users of all levels. No more navigating through complex menus - enjoy a straightforward and enjoyable experience.</li>
-      <li><strong>Diverse Currency Options:</strong> With a comprehensive list of currencies, you can convert between a wide range of options, tailored to your needs.</li>
+      {/* List of key features with brief descriptions */}
+      <li><strong>Real-Time Exchange Rates:</strong> Stay informed with the latest currency values. Our platform fetches real-time data to ensure accurate and up-to-date conversions.</li>
+      <li><strong>User-Friendly Interface:</strong> Navigate our platform with ease. We've designed an intuitive interface for users of all levels, eliminating the need for complicated menus and ensuring a straightforward and enjoyable experience.</li>
+      <li><strong>Diverse Currency Options:</strong> Choose from a wide range of currencies tailored to your needs. Our comprehensive list ensures flexibility in your currency conversions.</li>
     </ul>
 
-    <h4>Follow us on our social media platforms</h4>
+    <h4>Connect with us on social media</h4>
 
     <div className="socials mt-20">
-      <a href="https://www.facebook.com"><i className="fab fa-facebook fa-4x"></i></a>
-      <a href="https://www.twitter.com" style={{ marginLeft: '50px' }}><i className="fab fa-twitter fa-4x"></i></a>
-      <a href="https://www.google.com" style={{ marginLeft: '50px' }}><i className="fab fa-google-plus fa-4x"></i></a>
-      <a href="mailto:example@example.com" style={{ marginLeft: '50px' }}><i className="fas fa-envelope fa-4x"></i></a>
+      {/* Social media links with Font Awesome icons */}
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook fa-4x"></i></a>
+      <a href="https://www.twitter.com" style={{ marginLeft: '50px' }} target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter fa-4x"></i></a>
+      <a href="https://www.google.com" style={{ marginLeft: '50px' }} target="_blank" rel="noopener noreferrer"><i className="fab fa-google-plus fa-4x"></i></a>
+      <a href="mailto:example@example.com" style={{ marginLeft: '50px' }} target="_blank" rel="noopener noreferrer"><i className="fas fa-envelope fa-4x"></i></a>
       {/* Note: Changed "fa" to "fas" for the envelope icon (solid style) */}
     </div>
   </div>

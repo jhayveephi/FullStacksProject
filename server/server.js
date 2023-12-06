@@ -1,29 +1,29 @@
+// Import required modules
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-require('dotenv').config();
 
+// Create an Express application
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// middleware
-const corsOptions = {
-  origin: "https://currencyexchange-09qj.onrender.com", // frontend URI (ReactJS)
-}
-
+// Enable CORS and parse JSON requests
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.DB, {
+// Connect to MongoDB Atlas
+mongoose.connect('mongodb+srv://jhayeephi:jerome1985@cluster0.cofezco.mongodb.net/CurrencyAPI', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
 
+// Define the Currency model in MongoDB
 const Currency = mongoose.model('Currency', {
   name: String,
   rate: Number
 });
 
+// Function to fetch exchange rates from the database
 async function fetchExchangeRates() {
   try {
     const currencies = await Currency.find();
@@ -34,6 +34,7 @@ async function fetchExchangeRates() {
   }
 }
 
+// Define a route to get all currencies
 app.get('/api/currencies', async (req, res) => {
   try {
     const currencies = await fetchExchangeRates();
@@ -46,6 +47,7 @@ app.get('/api/currencies', async (req, res) => {
 
 // Additional routes for individual currencies, creation, update, and deletion
 
+// Route to add a new currency
 app.post('/api/currencies', async (req, res) => {
   try {
     const { name, rate } = req.body;
@@ -57,9 +59,11 @@ app.post('/api/currencies', async (req, res) => {
       return res.status(400).json({ error: 'Currency with this name already exists' });
     }
 
+    // Create a new currency and save it to the database
     const newCurrency = new Currency({ name, rate });
     await newCurrency.save();
 
+    // Fetch updated list of currencies
     const currencies = await fetchExchangeRates();
     res.json(currencies);
   } catch (error) {
@@ -85,15 +89,16 @@ app.get('/api/currencies/name/:name', async (req, res) => {
   }
 });
 
-
 // Route to update a currency by name
 app.put('/api/currencies/updateByName/:name', async (req, res) => {
   try {
     const { name } = req.params;
     const { rate } = req.body;
 
+    // Update the rate of the specified currency
     await Currency.findOneAndUpdate({ name }, { rate });
 
+    // Fetch updated list of currencies
     const currencies = await fetchExchangeRates();
     res.json(currencies);
   } catch (error) {
@@ -106,8 +111,11 @@ app.put('/api/currencies/updateByName/:name', async (req, res) => {
 app.delete('/api/currencies/deleteByName/:name', async (req, res) => {
   try {
     const { name } = req.params;
+
+    // Delete the specified currency
     await Currency.findOneAndDelete({ name });
 
+    // Fetch updated list of currencies
     const currencies = await fetchExchangeRates();
     res.json(currencies);
   } catch (error) {
@@ -138,6 +146,7 @@ app.post('/api/convert', async (req, res) => {
   }
 });
 
+// Start the server and log the port
 app.listen(PORT, async () => {
   console.log(`Server is running on port ${PORT}`);
   await fetchExchangeRates();
