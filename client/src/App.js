@@ -30,10 +30,9 @@ function App() {
           </NavLink>
           {/* NavLink for the Rate section with nested NavLink for Read */}
           <NavLink to="/rate/read" activeClassName="active">
-            Rate
+            Rate Management
           </NavLink>
         </nav>
-
         {/* Routes for rendering components based on the current URL */}
         <Routes>
           {/* Route for the Home component */}
