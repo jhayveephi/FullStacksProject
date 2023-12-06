@@ -10,7 +10,6 @@
     "install-client": "cd client && npm install",
     "build-client": "cd client && npm run build",
     "start-client": "cd client && npm run start",
-    "build": "react-scripts build",
     "start": "npm-run-all -p start-server start-client"
   },
   "keywords": [],
