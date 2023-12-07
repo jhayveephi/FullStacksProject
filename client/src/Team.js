@@ -8,9 +8,9 @@ const Team = () => (
       <h3>Kristine Soriano</h3>
       <p>
         Kristine is a passionate frontend developer with extensive experience. Her expertise includes:<br/><br/>
-        <span className="bullet-point">&#8226;</span>&nbsp; Creating visually appealing, user-friendly applications.<br/>
-        <span className="bullet-point">&#8226;</span>&nbsp; Crafting intuitive interfaces and staying updated with the latest web development trends.<br/>
-        <span className="bullet-point">&#8226;</span>&nbsp; Ensuring seamless user experiences for our projects.
+        <span className="bullet-point">•&nbsp;</span> Creating visually appealing, user-friendly applications.<br/>
+        <span className="bullet-point">•&nbsp;</span> Crafting intuitive interfaces and staying updated with the latest web development trends.<br/>
+        <span className="bullet-point">•&nbsp;</span> Ensuring seamless user experiences for our projects.
       </p>
     </div>
 
@@ -19,9 +19,9 @@ const Team = () => (
       <h3>Aldrin Florendo</h3>
       <p>
         Aldrin is a highly creative designer who plays a key role in shaping the visual identity of our applications. His expertise includes:<br/><br/>
-        <span className="bullet-point">&#8226;</span>&nbsp; Transforming concepts into visually stunning and cohesive designs.<br/>
-        <span className="bullet-point">&#8226;</span>&nbsp; Having a keen eye for aesthetics and a deep understanding of user experience design.<br/>
-        <span className="bullet-point">&#8226;</span>&nbsp; Elevating our projects to new heights with a passion for design excellence.
+        <span className="bullet-point">•&nbsp;</span> Transforming concepts into visually stunning and cohesive designs.<br/>
+        <span className="bullet-point">•&nbsp;</span> Having a keen eye for aesthetics and a deep understanding of user experience design.<br/>
+        <span className="bullet-point">•&nbsp;</span> Elevating our projects to new heights with a passion for design excellence.
       </p>
     </div>
 
@@ -30,9 +30,9 @@ const Team = () => (
       <h3>Jerome Pinugu</h3>
       <p>
         Jerome is a seasoned backend developer known for building robust and scalable server-side solutions. His expertise includes:<br/><br/>
-        <span className="bullet-point">&#8226;</span>&nbsp; Focusing on performance and reliability to ensure our applications run smoothly.<br/>
-        <span className="bullet-point">&#8226;</span>&nbsp; Utilizing strong problem-solving skills for addressing complex development challenges.<br/>
-        <span className="bullet-point">&#8226;</span>&nbsp; Dedicating to writing clean, maintainable code contributing significantly to project success.
+        <span className="bullet-point">•&nbsp;</span> Focusing on performance and reliability to ensure our applications run smoothly.<br/>
+        <span className="bullet-point">•&nbsp;</span> Utilizing strong problem-solving skills for addressing complex development challenges.<br/>
+        <span className="bullet-point">•&nbsp;</span> Dedicating to writing clean, maintainable code contributing significantly to project success.
       </p>
     </div>
   </div>
