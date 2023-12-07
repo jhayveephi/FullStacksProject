@@ -12,7 +12,7 @@ const Exchange = () => {
 
   // Fetch currencies from the server when the component mounts
   useEffect(() => {
-    axios.get('http://localhost:5000/api/currencies')
+    axios.get('https://server-lke2.onrender.com/api/currencies')
       .then(response => {
         // Format currencies for react-select options
         const formattedCurrencies = response.data.map(currency => ({ value: currency.name, label: currency.name }));
@@ -39,7 +39,7 @@ const Exchange = () => {
   const handleExchange = () => {
     if (selectedFromCurrency && selectedToCurrency && amount) {
       // Send a POST request to the server for currency conversion
-      axios.post('http://localhost:5000/api/convert', {
+      axios.post('https://server-lke2.onrender.com/api/convert', {
         fromCurrency: selectedFromCurrency.label,
         toCurrency: selectedToCurrency.label,
         amount: amount

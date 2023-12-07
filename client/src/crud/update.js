@@ -18,7 +18,7 @@ const Update = () => {
   useEffect(() => {
     const fetchCurrencyData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/currencies/name/${name}`);
+        const response = await axios.get(`https://server-lke2.onrender.com/api/currencies/name/${name}`);
         // Set the currency state with the fetched data
         setCurrency(response.data);
       } catch (error) {
@@ -37,7 +37,7 @@ const Update = () => {
 
     try {
       // Send a PUT request to update the currency
-      const res = await axios.put(`http://localhost:5000/api/currencies/updateByName/${name}`, updatedCurrency);
+      const res = await axios.put(`https://server-lke2.onrender.com/api/currencies/updateByName/${name}`, updatedCurrency);
       // Set success message and show success dialog
       setSuccessMessage(`Currency "${name}" updated successfully!`);
       setErrorMessage('');
