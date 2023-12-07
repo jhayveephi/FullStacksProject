@@ -398,7 +398,7 @@ h3 {
 }
 
 
-* Styles for Search Form */
+/* Styles for Search Form */
 .search-form {
   display: flex;
   justify-content: flex-end; /* Align to the right */
