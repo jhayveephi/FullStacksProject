@@ -29,7 +29,7 @@ const Read = () => {
   // Function to fetch currencies from the server
   const fetchCurrencies = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/currencies');
+      const response = await axios.get('https://server-lke2.onrender.com/api/currencies');
       // Sort currencies alphabetically by name
       const sortedCurrencies = response.data.sort((a, b) => a.name.localeCompare(b.name));
       setCurrencies(sortedCurrencies);
@@ -46,7 +46,7 @@ const Read = () => {
   // Function to delete a currency
   const deleteCurrency = async (name) => {
     try {
-      await axios.delete(`http://localhost:5000/api/currencies/deleteByName/${name}`);
+      await axios.delete(`https://server-lke2.onrender.com/api/currencies/deleteByName/${name}`);
       console.log('Currency deleted from DB:', name);
 
       // Update the state to remove the deleted currency
